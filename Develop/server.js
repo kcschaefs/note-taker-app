@@ -45,6 +45,7 @@ app.post('/api/notes', (req, res) => {
   res.status(201).json(json);
 });
 
+// DELETE request for notes
 app.delete('/api/notes/:id', (req, res) => {
   const fileContents = fs.readFileSync(db);
   const json = JSON.parse(fileContents);
